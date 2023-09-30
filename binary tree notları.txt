@@ -1,0 +1,149 @@
+***** inorder (sıralı) 
+
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 6   7
+İlk olarak, sol alt ağacı ziyaret etmeye başlıyoruz. Bu durumda, düğümleri sırayla 4, 2 ve 5 olarak ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+   -> 4   5 6   7
+Ardından, mevcut düğümü (1) ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+    -> 2     3
+       / \   / \
+      4   5 6   7
+Son olarak, sağ alt ağacı ziyaret ederiz. Bu durumda, düğümleri sırayla 6 ve 7 olarak ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 -> 6
+               \
+                7
+İnorder gezinme sonucunda, düğümler sırasıyla 4, 2, 5, 1, 6, 3 ve 7 olarak ziyaret edilir. Bu şekilde ikili ağacın düğümlerini sıralı bir şekilde gezebilirsiniz.
+
+
+
+
+
+
+
+********* pre-order (öncelikli)
+
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 6   7
+İlk olarak, mevcut düğümü (1) ziyaret ederiz.
+markdown
+Copy code
+   -> 1
+     /   \
+    2     3
+   / \   / \
+  4   5 6   7
+Ardından, sol alt ağacı ziyaret ederiz. Bu durumda, düğümleri sırayla 2, 4 ve 5 olarak ziyaret ederiz.
+rust
+Copy code
+   -> 1
+     /   \
+ -> 2     3
+   / \   / \
+  4   5 6   7
+Sol alt ağacın gezinmesi tamamlandıktan sonra, sağ alt ağaca geçeriz. Bu durumda, düğümleri sırayla 3, 6 ve 7 olarak ziyaret ederiz.
+rust
+Copy code
+   -> 1
+     /   \
+    2     3
+   / \   / \
+  4   5 -> 6
+           \
+            7
+Pre-order gezinme sonucunda, düğümler sırasıyla 1, 2, 4, 5, 3, 6 ve 7 olarak ziyaret edilir. Bu şekilde ikili ağacın düğümlerini öncelikli bir şekilde gezebilirsiniz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+**** post-order (sonralık) gezinmesini grafikle açıklıyorum:
+
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 6   7
+İlk olarak, sol alt ağacı ziyaret ederiz. Bu durumda, düğümleri sırayla 4 ve 5 olarak ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+   -> 4   5 6   7
+Ardından, sağ alt ağacı ziyaret ederiz. Bu durumda, düğümleri sırayla 6 ve 7 olarak ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 -> 6
+               \
+                7
+Sol ve sağ alt ağaçları ziyaret ettikten sonra, mevcut düğümü (1) ziyaret ederiz.
+markdown
+Copy code
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 6   7
+   -> 
+Post-order gezinme sonucunda, düğümler sırasıyla 4, 5, 2, 6, 7, 3 ve 1 olarak ziyaret edilir. Bu şekilde ikili ağacın düğümlerini sonralık sırasına göre gezebilirsiniz.
+
+
+
+
+
+*** ÖRN:
+      "5821679" sırayla binary dizilimine eklenmesi aşağıdaki şekildedir :)
+
+
+
+
+
+           5
+         /   \
+        2     8       
+       /      / \
+    1        6   9
+              \
+                7	
+
+
